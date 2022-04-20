@@ -1,0 +1,36 @@
+.header-navbar-overlay {
+    background: rgba(22, 11, 109, 0.7);
+    left: 100%;
+    width: 0;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s;
+    transition-delay: .2s;
+}
+
+.headerNavbar.menuShown .header-navbar-overlay {
+    width: 100vw;
+    opacity: 1;
+    visibility: visible;
+}
+
+.headerNavbar::before, .header-navbar-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    top: 0;
+}
+
+button:hover {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.logo-tagline {
+    width: 85%;
+}
